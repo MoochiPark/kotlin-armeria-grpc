@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package io.wisoft.account.v1;
+
+option java_multiple_files = true;
+option java_outer_classname = "GetAccountAllV1Proto";
+
+message GetAccountAllResponseV1 {
+  repeated AccountV1 accounts = 1;
+}
+
+message AccountV1 {
+  string id = 1;
+  string name = 2;
+  AccountRole role = 3;
+}
+
+enum AccountRole {
+  ADMIN = 0;
+  MEMBER = 1;
+}

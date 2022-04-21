@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package io.wisoft.account.v1;
+
+import "io/wisoft/account/v1/SignUpV1.proto";
+import "io/wisoft/account/v1/GetProfileStreamV1.proto";
+import "io/wisoft/account/v1/GetAccountAllV1.proto";
+import "google/protobuf/empty.proto";
+
+
+service AccountRoute {
+  rpc signUpV1(SignUpRequestV1) returns (SignUpResponseV1) {}
+  rpc getProfileStreamV1(google.protobuf.Empty) returns (stream GetProfileStreamResponseV1) {}
+  rpc getAccountAllV1(google.protobuf.Empty) returns (GetAccountAllResponseV1) {}
+}

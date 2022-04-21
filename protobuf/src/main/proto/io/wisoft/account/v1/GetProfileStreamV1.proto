@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package io.wisoft.account.v1;
+
+option java_multiple_files = true;
+option java_outer_classname = "GetProfileStreamV1Proto";
+
+message GetProfileStreamResponseV1 {
+  bytes data = 1;
+}
